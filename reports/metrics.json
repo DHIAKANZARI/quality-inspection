@@ -1,0 +1,17 @@
+{
+  "source": "fashion",
+  "model": "cnn",
+  "n_train": 60000,
+  "n_test": 4000,
+  "accuracy": 0.9333,
+  "f1": 0.9316,
+  "roc_auc": 0.9803,
+  "train_seconds": 868.4,
+  "recall_by_defect_type": {
+    "hole": 0.9414,
+    "stain": 0.8735,
+    "tear": 0.9284,
+    "misprint": 0.8725
+  },
+  "false_alarm_rate": 0.0377
+}

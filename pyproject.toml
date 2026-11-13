@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qcvision"
+version = "1.0.0"
+description = "Visual quality inspection: detect defective products from images and accept/reject shipment lots."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Dhia Kanzari" }]
+license = { text = "MIT" }
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scikit-learn>=1.3",
+  "scikit-image>=0.21",
+  "pillow>=10",
+  "matplotlib>=3.7",
+  "joblib>=1.3",
+  "fastapi>=0.110",
+  "uvicorn>=0.27",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "httpx>=0.27"]
+
+[project.scripts]
+qcvision = "qcvision.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

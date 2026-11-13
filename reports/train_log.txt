@@ -1,0 +1,38 @@
+Training on 60000 images (50% defective)...
+  epoch 1/10  loss 0.6422
+  epoch 2/10  loss 0.3584
+  epoch 3/10  loss 0.2920
+  epoch 4/10  loss 0.2548
+  epoch 5/10  loss 0.2254
+  epoch 6/10  loss 0.2032
+  epoch 7/10  loss 0.1810
+  epoch 8/10  loss 0.1580
+  epoch 9/10  loss 0.1381
+  epoch 10/10  loss 0.1221
+              precision    recall  f1-score   support
+
+        good       0.91      0.96      0.93      1990
+      defect       0.96      0.90      0.93      2010
+
+    accuracy                           0.93      4000
+   macro avg       0.93      0.93      0.93      4000
+weighted avg       0.93      0.93      0.93      4000
+
+{
+  "source": "fashion",
+  "model": "cnn",
+  "n_train": 60000,
+  "n_test": 4000,
+  "accuracy": 0.9333,
+  "f1": 0.9316,
+  "roc_auc": 0.9803,
+  "train_seconds": 868.4,
+  "recall_by_defect_type": {
+    "hole": 0.9414,
+    "stain": 0.8735,
+    "tear": 0.9284,
+    "misprint": 0.8725
+  },
+  "false_alarm_rate": 0.0377
+}
+Model saved to models/qc_model.joblib
